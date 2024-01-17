@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   const[count,setCount]=useState(0);
-  useEffect(()=>{console.log("clicked",count)},[])//Empty dependency, It will executes after return statement for only once
+  useEffect(()=>{console.log("clicked",count)},[count])//with dependency, It will executes for every updation of count value
   return (
 
     <div className="App">
