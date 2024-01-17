@@ -12,7 +12,7 @@ function App() {
   <div>
     <center>
      <input type="text" value={input} name="input" onChange={handleChange}/><br/>
-     <button onClick={()=>setResult(eval(input))}>Result</button>
+     <button onClick={()=>setResult(eval(input))}>Result</button>//evel function is used to do the calculations
      <h1>Result is:{result}</h1>
 
      <button onClick={()=>setInput(input+"1")}>1</button>
