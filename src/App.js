@@ -9,7 +9,7 @@ function App() {
   })
   let {username,password}=data;
   function handleOnChnage(e){
-    setData({...data,[e.target.name]:[e.target.value]})
+    setData({...data,[e.target.name]:e.target.value})
   }
   function handleOnSubmit(e){
     e.preventDefault();
