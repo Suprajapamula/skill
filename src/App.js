@@ -6,7 +6,7 @@ function App(){
   const[data,setData]=useState([])
   useEffect(()=>{
     axios.get("https://jsonplaceholder.typicode.com/todos").then((res)=>{
-        setData(res.data)
+        setData(res.data)//No need for converting the response into JSON format
     })
   },[])
  return(
