@@ -1,16 +1,17 @@
-import React from 'react'
-import { Link,Outlet } from 'react-router-dom'
+
+import './App.css';
+import {Link, Outlet} from 'react-router-dom'
 function App() {
   return (
-   <div>
-        <ul>
-            <Link to="/"><li><h1>Home</h1></li></Link>
-            <Link to="/dashboard"><li><h1>Dashboard</h1></li></Link>
-            <Link to="/about"><li><h1>About</h1></li></Link>
-        </ul>
+    <div>
+      <ul>
+        <Link to="/home"><h1><li>Home</li></h1></Link>
+        <Link to="/about"><h1><li>About</li></h1></Link>
+        <Link to="/contact"><h1><li>Contact</li></h1></Link><br/>
+      </ul>
+      <Outlet></Outlet>
     </div>
-  )
+  );
 }
 
-export default App
-
+export default App;
