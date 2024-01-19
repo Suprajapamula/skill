@@ -6,13 +6,13 @@ function App() {
   return (
     <div style={{backgroundColor:"white", border:"1px solid black", textAlign:"center"}}>
      <h1 style={{color:"white"}}>Hello</h1>
-     <img src={Logo} width={500} height={500} alt='img'/>
+     <img src={Logo} width={500} height={500} alt='img'/>//For image
      <hr/>
-     <audio controls>
+     <audio controls>//for audio
         <source src={Music} type='audio/mp3'/>
       </audio>
       <hr/>
-      <video controls width={320} height={450}> 
+      <video controls width={320} height={450}> //for video
         <source src={Video} type='video/mp4'/>
       </video>
     </div>
