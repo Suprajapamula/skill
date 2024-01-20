@@ -1,0 +1,60 @@
+[{
+    "name":"Hyderabad",
+    "id":1
+},
+{
+    "name":"Warangal",
+    "id":2
+},
+{
+    "name":"Siddipet",
+    "id":1
+},
+{
+    "name":"Nalgonda",
+    "id":1
+},
+{
+    "name":"Mahbubnagar",
+    "id":1
+},
+{
+    "name":"Ramagundam",
+    "id":1
+},
+{
+    "name":"Khammam",
+    "id":1
+},
+{
+    "name":"Karimnagar",
+    "id":1
+},
+{
+    "name":"Nizamabad",
+    "id":1
+},
+{
+    "name":"Bodhan",
+    "id":1
+},
+{
+    "name":"Jagtial",
+    "id":1
+},
+{
+    "name":"Adilabad",
+    "id":1
+},
+{
+    "name":"Miryalaguda",
+    "id":1
+},
+{
+    "name":"Nirmal",
+    "id":1
+},
+{
+    "name":"Suryapet",
+    "id":1
+}]
