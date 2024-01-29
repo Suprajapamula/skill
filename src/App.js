@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useMemo } from 'react'
+import { useState } from 'react'
 function App() {
+  const[data,setData]=useState(0);
+  const [number,setNumber]=useState(5);
+  //const factRes=fact(number) (repitation of fact function is done, inorder to avoid it we use useMemo())
+  const factRes=useMemo(()=>fact(number),[number])//fact function is called, when only number got changed
+  function fact(n){
+    let res=1;
+    for(let i=n;i>=1;i--){
+      res=res*i;
+    }
+    console.log("fact function called")
+    return res;
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <center>
+       Count:{data}<br/>
+       Fact:{factRes}<br/>
+       <button onClick={()=>setData(data+1)}>Count Increment</button>
+       <button onClick={()=>setNumber(number+1)}>Number Increment</button>
+       
+      </center>
     </div>
-  );
+  )
 }
 
-export default App;
+ export default App
