@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import TodoList from './TodoList';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  const[todo,setTodo]=useState("");
+  const [data,setData]=useState([]);
+  const handleChange=e=>{
+    setTodo(e.target.value);
+  }
+  const handleSubmit=e=>{
+    e.preventDefault();
+    setData([...data,todo]);
+    setTodo("");
+  }
+  const handleDeleteTodo=(indexValue)=>{
+      const newTodos=data.filter((todo,index)=>{
+          return index !==indexValue
+      })
+      setData(newTodos)
+  }
+  
 
-export default App;
+ 
+  return (
+    <div>
+      <center>
+        <h1>Todolist Application</h1>
+        <form onSubmit={handleSubmit}>
+          <input type="text" value={todo} onChange={handleChange}/>&nbsp;&nbsp;
+          <input type="submit" style={{backgroundColor:"rgb(161, 244, 37)", border:"1px solid black", padding:"3px",borderRadius:"2px"}}/>
+        </form>
+        <TodoList data={data} handleDeleteTodo={handleDeleteTodo}/>
+      </center>
+    </div>
+  )
+}
+export default App
